@@ -65,8 +65,9 @@ namespace CommandLineFlashcardApp
         }
         public Flashcard[] getRandomisedFlashcardsArray()
         {
-            // TODO - return randomised array
-            return getCurrentDeckAsArray();
+            Flashcard[] array = getCurrentDeckAsArray();
+            FisherYatesShuffle.Shuffle(array);
+            return array;
         }
         public void populateAvailableDecksArray()
         {
